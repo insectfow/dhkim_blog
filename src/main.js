@@ -7,8 +7,6 @@ import firebase from '../public/js/firebase'
 
 Vue.config.productionTip = false
 
-Vue.use(firebase);
-
 new Vue({
   router,
   store,
