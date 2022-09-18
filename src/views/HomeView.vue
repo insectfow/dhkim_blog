@@ -70,6 +70,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/config.scss';
 .home {
   padding: 40px 0 20px;
   .card-list {
@@ -82,7 +83,6 @@ export default {
       min-width: calc(20% - 15px);
       > a {
         position: relative;
-        box-shadow: 0 0 10px rgba(0,0,0,0.18);
         aspect-ratio: 1/1.618;
         padding: 10px;
         display: flex;
@@ -106,13 +106,13 @@ export default {
           position: relative;
           z-index: 1;
           font-size: 2rem;
-          color: #ffffff;
+          color: var(--card-content-color);
           opacity: 0;
           transition: all 0.25s ease-in-out;
         }
       }
       > a:hover {
-        box-shadow: 0 0 12px 5px rgba($color: #ffffff, $alpha: 0.2);
+        box-shadow: 0 0 12px 5px rgba($color: var(--shadow-color), $alpha: 0.2);
         transform: scale(105%);
         > h4 {
           opacity: 1;

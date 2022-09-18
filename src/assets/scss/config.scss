@@ -11,6 +11,8 @@ $contentColor: #777777;
   /*variables*/
   --title-color: #6768ab;
   --content-color: #777777;
+  --card-content-color: #ffffff;
+  --shadow-color:#000000;
 }
 
 /* IE 미지원 */
@@ -21,6 +23,8 @@ $contentColor: #777777;
       /*variables*/
       --title-color: #6768ab;
       --content-color: #6a6e9e;
+      --card-content-color: #ffffff;
+      --shadow-color:#ffffff;
   }
 }
 
@@ -30,6 +34,8 @@ $contentColor: #777777;
   /*variables*/
   --title-color: #6768ab;
   --content-color: #777777;
+  --card-content-color: #ffffff;
+  --shadow-color:#000000;
 }
 
 :root.darkmode {
@@ -38,6 +44,8 @@ $contentColor: #777777;
   /*variables*/
   --title-color: #6768ab;
   --content-color: #6a6e9e;
+  --card-content-color: #ffffff;
+  --shadow-color:#ffffff;
 }
 .swich-btn-wrap {
   border: 1px solid var(--content-color);
