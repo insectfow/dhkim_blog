@@ -1,32 +1,74 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <header class="header">
+      <div class="container flex-container">
+        <h3 class="logo">
+          <router-link to="/">
+            Dh blog
+          </router-link>
+        </h3>
+        <swich-button-vue @toggle="onToggleDarkMode" :darkmode="darkmode" />
+      </div>
+    </header>
+    <router-view class="page" />
+    <div class="popup-modal" v-show="isModal">
+      {{isModalText}}
+    </div>
+    
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import SwichButtonVue from './components/modules/SwichButton.vue';
+import { mapState } from 'vuex';
+export default {
+  computed: {
+    ...mapState(['isModal', 'isModalText'])
+  },
+  data() {
+    return {
+      darkmode: false
     }
-  }
+  },
+  components: {
+    SwichButtonVue
+  },
+  mounted() {
+    if(window && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add("darkmode");
+      this.darkmode = true;
+    } else {
+      document.documentElement.classList.add("lightmode");
+      this.darkmode = false;
+    }
+  },
+  methods: {
+    onToggleDarkMode() {
+      if (window) {
+        console.log(window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          if(document.documentElement.classList.contains('darkmode')) {
+            document.documentElement.classList.remove("darkmode");
+            document.documentElement.classList.add("lightmode");
+            this.darkmode = false;
+          } else {
+            document.documentElement.classList.remove("lightmode");
+            document.documentElement.classList.add("darkmode");
+            this.darkmode = true;
+          }
+        } else {
+          if(document.documentElement.classList.contains('lightmode')) {
+            document.documentElement.classList.remove("lightmode");
+            document.documentElement.classList.add("darkmode");
+            this.darkmode = true;
+          } else {
+            document.documentElement.classList.remove("darkmode");
+            document.documentElement.classList.add("lightmode");
+            this.darkmode = false;
+          }
+        }
+      }
+    }
+  } 
 }
-</style>
+</script>

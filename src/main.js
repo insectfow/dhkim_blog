@@ -3,7 +3,8 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
-import firebase from '../public/js/firebase'
+// import firebase from '../public/js/firebase'
+import '@/assets/scss/app.scss'
 
 Vue.config.productionTip = false
 

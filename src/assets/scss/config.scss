@@ -1,0 +1,55 @@
+// 메인컬러
+$mainColor:#6768ab;
+$backGroundColor: #f7f7f7;
+// 폰트컬러
+$fontColor:#000000;
+$contentColor: #777777;
+
+:root {
+  --background-color: #f7f7f7;
+  background-color: #f7f7f7;
+  /*variables*/
+  --title-color: #6768ab;
+  --content-color: #777777;
+}
+
+/* IE 미지원 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #181c40;
+      background-color: #181c40;
+      /*variables*/
+      --title-color: #6768ab;
+      --content-color: #6a6e9e;
+  }
+}
+
+:root.lightmode {
+  --background-color: #f7f7f7;
+  background-color: #f7f7f7;
+  /*variables*/
+  --title-color: #6768ab;
+  --content-color: #777777;
+}
+
+:root.darkmode {
+  --background-color: #181c40;
+  background-color: #181c40;
+  /*variables*/
+  --title-color: #6768ab;
+  --content-color: #6a6e9e;
+}
+.swich-btn-wrap {
+  border: 1px solid var(--content-color);
+  background: var(--background-color);
+}
+
+.hello .hello__title {
+  color: var(--title-color);
+  font-weight: 600;
+ 
+}
+
+.hello .hello__content {
+  color: var(--content-color);
+}

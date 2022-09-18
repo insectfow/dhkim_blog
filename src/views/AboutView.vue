@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>김동혁 노답이네</h1>
   </div>
 </template>
