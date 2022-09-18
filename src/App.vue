@@ -14,10 +14,11 @@
     <div class="popup-modal" v-show="isModal">
       {{isModalText}}
     </div>
-    
+    <alert-modal-vue v-show="isModal" />
   </div>
 </template>
 <script>
+import AlertModalVue from './components/modules/AlertModal.vue';
 import SwichButtonVue from './components/modules/SwichButton.vue';
 import { mapState } from 'vuex';
 export default {
@@ -30,7 +31,8 @@ export default {
     }
   },
   components: {
-    SwichButtonVue
+    SwichButtonVue,
+    AlertModalVue
   },
   mounted() {
     if(window && window.matchMedia('(prefers-color-scheme: dark)').matches) {

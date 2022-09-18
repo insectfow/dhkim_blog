@@ -61,3 +61,31 @@ $contentColor: #777777;
 .hello .hello__content {
   color: var(--content-color);
 }
+
+input:focus {
+  outline: none;
+}
+
+input {
+  background: var(--background-color);
+  color: var(--title-color);
+  border: none;
+  border-bottom: 1px solid var(--content-color);
+}
+input::placeholder {
+  color: var(--content-color);
+}
+
+// input[type=range]{
+//   appearance: none;
+//   border-bottom: none;
+//   background: var(--background-color);
+// }
+
+input[type="range"]::-webkit-slider-runnable-track {
+  border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+  background: #6768ab;
+}

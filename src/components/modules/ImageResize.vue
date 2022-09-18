@@ -129,8 +129,6 @@ export default {
         margin-top: 10px;
         width: 200px;
         height: 36px;
-        border: none;
-        border-bottom: 1px solid #000;
         font-size: 2rem;
         margin-bottom: 10px;
         box-sizing: border-box;

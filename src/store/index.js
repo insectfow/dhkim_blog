@@ -13,7 +13,7 @@ export default new Vuex.Store({
   mutations: {
     toggleModal(state, payload) {
       console.log(payload, payload.text);
-      if (payload & payload.text) {
+      if (payload.text) {
         state.isModalText = payload.text;
         state.isModal = true;
       } else {
