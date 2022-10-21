@@ -29,8 +29,8 @@ export default {
         },
         {
           idx: 2,
-          name: '이미지 압축',
-          path: '/imageResize',
+          name: '스와이프',
+          path: '/swiper',
           imageUrl: 'https://images.unsplash.com/photo-1663447000721-93a6d5bc71db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60'
         },
         {

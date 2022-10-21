@@ -11,15 +11,12 @@
       </div>
     </header>
     <router-view class="page" />
-    <div class="popup-modal" v-show="isModal">
-      {{isModalText}}
-    </div>
-    <alert-modal-vue v-show="isModal" />
+    <alert-modal-vue v-show="isModal" :text="isModalText" />
   </div>
 </template>
 <script>
-import AlertModalVue from './components/modules/AlertModal.vue';
-import SwichButtonVue from './components/modules/SwichButton.vue';
+import SwichButtonVue from '@/components/modules/SwichButton.vue';
+import AlertModalVue from '@/components/modules/AlertModal.vue';
 import { mapState } from 'vuex';
 export default {
   computed: {
